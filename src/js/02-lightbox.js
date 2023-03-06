@@ -17,13 +17,6 @@ const markup = galleryItems.map((data) => makeGalleryCard(data)).join("");
 
 imagesList.insertAdjacentHTML('afterbegin', markup);
 
-imagesList.addEventListener("click", event => {
-  event.preventDefault();
- 
-  if (event.target.nodeName !== 'IMG') {
-        return;
-  }
-
     const lightbox = new SimpleLightbox(".gallery a", {
      captionSelector: 'img',
      captionsData: 'alt',
@@ -31,5 +24,4 @@ imagesList.addEventListener("click", event => {
      captionDelay: 250,
      scrollZoom: false,
     });
- })
 
